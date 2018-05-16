@@ -1,2 +1,10 @@
+profiles:
+    active: -dev
+
+---  
+
+spring:
+  profiles: dev 
+     
 server:
   port: 9001
