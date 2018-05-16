@@ -1,0 +1,35 @@
+server:
+  port: 9527
+  
+spring:
+  application:
+    name: jarvis-zuul-gateway
+
+eureka:
+  client:
+    service-url:
+      #客户端注册进eureka服务列表内
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    #注册到eureka后，status的名字（服务在eureka的唯一标志）
+    instance-id: jarvis-zuul.com
+    #访问路径可以显示IP地址
+    prefer-ip-address: true
+
+zuul:
+  routes:
+    mydept.serviceId: spring-cloud-provider-dept
+    mydept.path: /mydept/**
+  #使真实服务地址不可用（忽略单个）
+#  ignored-services: spring-cloud-provider-dept
+  #忽略所有
+  ignored-services: "*"
+  #前缀
+  prefix: /jarvis
+
+info:
+  app.name: jarvis-zuul-9527
+  company.name: www.jarvis.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+
