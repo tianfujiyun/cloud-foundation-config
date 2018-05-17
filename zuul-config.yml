@@ -18,7 +18,7 @@ eureka:
 
 zuul:
   routes:
-    mydept.serviceId: INTEGRAL-PERSONALCENTER-PROVIDER
+    mydept.serviceId: integral-personalcenter-provider
     mydept.path: /me/**
   #使真实服务地址不可用（忽略单个）
 #  ignored-services: spring-cloud-provider-dept
@@ -28,8 +28,8 @@ zuul:
   prefix: /dmsdbj
 
 info:
-  app.name: jarvis-zuul-9527
-  company.name: www.jarvis.com
+  app.name: cloud-zuul-9527
+  company.name: www.dmsdbj.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 
