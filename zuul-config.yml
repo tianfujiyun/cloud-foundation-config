@@ -18,7 +18,7 @@ eureka:
 
 zuul:
   routes:
-    mydept.serviceId: integral-personalcenter-provider
+    mydept.serviceId: integral-personalcenter-consumer
     mydept.path: /me/**
   #使真实服务地址不可用（忽略单个）
 #  ignored-services: spring-cloud-provider-dept
