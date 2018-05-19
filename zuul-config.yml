@@ -16,11 +16,7 @@ eureka:
     #访问路径可以显示IP地址
     prefer-ip-address: true
 
-zuul:
-  host:
-    connect-timeout-millis: 60000
-    socket-timeout-millis: 60000
-    
+zuul:    
   routes:
     mydept.serviceId: integral-personalcenter-consumer
     mydept.path: /me/**
@@ -33,13 +29,6 @@ zuul:
   #前缀
   prefix: /dmsdbj
   
-hystrix:
-    command:
-        default:
-            execution:
-                isolation:
-                    thread:
-                        timeout-in-milliseconds: 60000
 
 info:
   app.name: cloud-zuul-9527
