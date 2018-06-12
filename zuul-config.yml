@@ -18,8 +18,24 @@ eureka:
 
 zuul:    
   routes:
+    #个人中心
     personalcenter.path: /personalcenter/**
     personalcenter.serviceId: integral-personalcenter-consumer
+    #米圈
+    gam.path: /gam/**
+    gam.serviceId: integral-gam-consumer
+    #鬼市
+    ghostmarket.path: /ghostmarket/**
+    ghostmarket.serviceId: integral-ghostmarket-consumer
+    #知识付费
+    knowledgepay.path: /knowledgepay/**
+    knowledgepay.serviceId: integral-knowledgepay-consumer
+    #米币
+    mcoin.path: /mcoin/**
+    mcoin.serviceId: integral-mcoin-consumer
+    #任务管理
+    taskmanage.path: /taskmanage/**
+    taskmanage.serviceId: integral-taskmanage-consumer
   #使真实服务地址不可用（忽略单个）
 #  ignored-services: spring-cloud-provider-dept
   #忽略所有
